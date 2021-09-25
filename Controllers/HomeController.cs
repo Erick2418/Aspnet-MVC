@@ -11,15 +11,21 @@ namespace annotations.Controllers
 {
     public class HomeController : Controller
     {
+
+        MusicCTX ctx;
+
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger,MusicCTX _context)
         {
             _logger = logger;
+            ctx=_context;
         }
 
         public IActionResult Index()
         {
+            ViewBag.Generos = ctx.Genero.ToList(); // esto es igual a un select * from genero
+
             return View();
         }
 

@@ -2,7 +2,27 @@
     ViewData["Title"] = "Home Page";
 }
 @model Usuarios
+
 <div class="text-center">
+
+@foreach (Genero G in ViewBag.Generos)
+{
+    <li> @G.IdGenero  - @G.Nombre   </li>
+}
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
     <form asp-action="SetUsuario" asp-controller="Home" method="POST">
         
         <div class="form-group col-md-6">
@@ -51,4 +71,3 @@
         </div>
     </form>
 
-</div>
