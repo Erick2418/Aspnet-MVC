@@ -11,6 +11,9 @@ namespace annotations.Models
         [Key]
         [Column("IdGenero")]
         public int IdGenero {get;set;}
+        [Required(ErrorMessage ="Escriba el nombre")]
+        [MinLength(2,ErrorMessage ="Escriba almenos 2 caracteres")]
+        [MaxLength(20,ErrorMessage ="Escribe un maximo de 20 caracteres")]
         // [Column("nombre")]
         public string Nombre {get;set;}
 
