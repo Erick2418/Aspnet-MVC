@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 namespace annotations.Models
 {
     [Table("Genero")] // aqui le especificacmos apra que no busque en plural
@@ -8,11 +9,12 @@ namespace annotations.Models
     // tiene que ser parcail para que todas se compilen por una sola y no como separadas
     {
         [Key]
+        [Column("IdGenero")]
         public int IdGenero {get;set;}
         // [Column("nombre")]
         public string Nombre {get;set;}
 
+        // public virtual List<Artista> Artistas {get;set;}
 
-        
     }
 }

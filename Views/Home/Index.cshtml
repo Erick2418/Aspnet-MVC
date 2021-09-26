@@ -5,10 +5,19 @@
 
 <div class="text-center">
 
-@foreach (Genero G in ViewBag.Generos)
-{
-    <li> @G.IdGenero  - @G.Nombre   </li>
-}
+<ul>
+    @foreach (Genero G in ViewBag.Generos)
+    {
+        <li> @G.IdGenero  - @G.Nombre   </li>
+    }
+</ul>
+
+<ul>
+    @foreach (Artista A in ViewBag.Artistas)
+    {
+        <li> @A.Nombre  - @A.Genero.Nombre   </li>
+    }
+</ul>
 
 
 </div>
